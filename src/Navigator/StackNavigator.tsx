@@ -2,15 +2,27 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Pantalla1Screen } from '../screens/Pantalla1Screen';
 import { Pantalla2Screen } from '../screens/Pantalla2Screen';
 import { Pantalla3Screen } from '../screens/Pantalla3Screen';
+import { PersonaScreen } from '../screens/PersonaScreen';
 
 const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
     return (
-    <Stack.Navigator>
-        <Stack.Screen name="Pantalla1" component={Pantalla1Screen} />
-        <Stack.Screen name="Pantalla2" component={Pantalla2Screen} />
-        <Stack.Screen name="Pantalla3" component={Pantalla3Screen} />
+    <Stack.Navigator /* initialRouteName='Pantalla2' */
+    screenOptions={{
+        cardStyle:{
+            backgroundColor: 'white'
+        },
+        /* headerShown: false, */ //se quita la cabecera de navegacion
+        headerStyle: {
+            elevation: 10 //la separacion entre la cabecera y el cuerpo del sricpt
+            
+        }
+    }}>
+        <Stack.Screen name="Pantalla1" options={{title: 'Home'}} component={Pantalla1Screen} />
+        <Stack.Screen name="Pantalla2" options={{title: 'Lista de Productos'}} component={Pantalla2Screen} />
+        <Stack.Screen name="Pantalla3" options={{title: 'Configuraciones'}} component={Pantalla3Screen} />
+        <Stack.Screen name="Persona" options={{title: 'Lista Personas'}} component={PersonaScreen} />
     </Stack.Navigator>
     );
 }

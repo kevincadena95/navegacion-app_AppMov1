@@ -4,7 +4,7 @@ import { StackNavigator } from './src/Navigator/StackNavigator';
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       <StackNavigator/>
     </NavigationContainer>
   )
