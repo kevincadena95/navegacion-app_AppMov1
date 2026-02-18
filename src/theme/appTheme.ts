@@ -12,4 +12,29 @@ export const stylesGlobal = StyleSheet.create({
         marginVertical: 15,
         
     },
+
+    menu: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        marginVertical: 15,
+    },
+
+
+    avatar: {
+        width: 100,
+        height: 100,
+        borderRadius: 100   
+
+    },containerAvatar: {
+        alignItems: 'center',
+        
+    },
+
+    menuText: {
+        fontSize: 18,       
+    },
+
+    menuButton: {
+        marginVertical: 10,       
+    },
 })

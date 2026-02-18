@@ -1,7 +1,8 @@
-import { createDrawerNavigator, DrawerContentComponentProps } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView } from '@react-navigation/drawer';
 import { StackNavigator } from './StackNavigator';
 import { SettingsScreen } from '../screens/SettingsScreen';
-import { Text } from 'react-native';
+import { Image, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
+import { stylesGlobal } from '../theme/appTheme';
 
 const Drawer = createDrawerNavigator();
 
@@ -18,6 +19,19 @@ export const DrawerPersonalizadoNavigator =() =>{
 //Componete Menu Lateral
 const MenuLateral = (props: DrawerContentComponentProps) =>{
     return(
-        <Text>Hola segundo sistemas</Text>
+        <DrawerContentScrollView>
+            <View style={stylesGlobal.containerAvatar}>
+                <Image source={{uri: 'https://i.postimg.cc/KjVCnnD7/icon-Drewer.webp'}}
+                style={stylesGlobal.avatar}/>
+            </View>
+            <View style={stylesGlobal.menu}>
+                <TouchableOpacity style={stylesGlobal.menuButton}>
+                    <Text style={stylesGlobal.menuText}>Navigación</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={stylesGlobal.menuButton}>
+                    <Text style={stylesGlobal.menuText}>Ajustes</Text>
+                </TouchableOpacity>
+            </View>
+        </DrawerContentScrollView>
     )
 }
