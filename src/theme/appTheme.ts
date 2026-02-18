@@ -9,6 +9,7 @@ export const stylesGlobal = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginVertical: 15
+        marginVertical: 15,
+        
     },
 })

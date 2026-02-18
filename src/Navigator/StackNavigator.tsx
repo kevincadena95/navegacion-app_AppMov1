@@ -4,7 +4,15 @@ import { Pantalla2Screen } from '../screens/Pantalla2Screen';
 import { Pantalla3Screen } from '../screens/Pantalla3Screen';
 import { PersonaScreen } from '../screens/PersonaScreen';
 
-const Stack = createStackNavigator();
+//Props de navegación: especificar los parametros de navegación
+export type RookStackParams = {
+    Pantalla1: undefined,
+    Pantalla2: undefined,
+    Pantalla3: undefined,
+    Persona: {id: number, nombre: string, edad: number},
+}
+
+const Stack = createStackNavigator<RookStackParams>();
 
 export const StackNavigator = () => {
     return (
